@@ -56,7 +56,7 @@ def pick_action(state):
 
 def train():
 	batch = np.array(random.sample(memory, batch_size))
-	states, actions, rewards, next_states, dones = np.split(batch, 5, axis = 1)
+	states, actions, rewards, next_states, dones = np.split(batch, 5, axis=1)
 	
 	states = np.array(states.flatten().flatten().tolist())
 	actions = np.array(actions.flatten().flatten().tolist())
@@ -128,6 +128,8 @@ for e in range(episodes):
 		print('episode:', e, ' current epsilon:',epsilon, ' current rolling score', np.mean(recent_scores))
 
 
+all_scores_df = pd.DataFrame(all_scores)
+all_scores_df.to_csv('scores_success.csv')
 
 
 
