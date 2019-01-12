@@ -1,4 +1,4 @@
-# Project 2 - Solving OpenAI Gym's lunar lander
+# Solving OpenAI Gym's lunar lander
 
 ## Module requirements
 * python
